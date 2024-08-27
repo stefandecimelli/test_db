@@ -16,7 +16,7 @@ update mysql.user set host = '%' where user='root';
 ```
 Then exit, and restart the docker container.
 
-Load the database with:
+Load and test the database with:
 ```
 docker cp /home/stefan/test_db mysql57:/tmp/testdb
 docker exec -i -w /tmp/testdb mysql57 mysql -uroot -ppassword1 < employees.sql
